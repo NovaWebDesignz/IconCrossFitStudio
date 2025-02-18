@@ -6,8 +6,8 @@ export default function Home() {
       <main className="flex flex-col items-center row-start-2 gap-8 sm:items-start">
         <Image
           className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
+          src="/IconCrossfit_Logo.jpg"
+          alt="Gym logo"
           width={180}
           height={38}
           priority
