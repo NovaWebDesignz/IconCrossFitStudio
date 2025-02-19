@@ -23,7 +23,7 @@ const Header = () => {
 
         {/* Navigation Links - Centered (Hidden on small screens) */}
         <div className="justify-center flex-1 hidden md:flex">
-          <nav className="flex space-x-4 text-[13px] font-light text-white transition md:space-x-8">
+          <nav className="flex space-x-4 text-[18px] font-light text-white transition md:space-x-8">
             {["HOME", "ABOUT", "LOCATION", "PLANS", "EVENTS"].map((item, index) => (
               <Link 
                 key={index} 

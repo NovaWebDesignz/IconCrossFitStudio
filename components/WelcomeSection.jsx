@@ -2,7 +2,7 @@ import React from "react";
 
 const WelcomeSection = () => {
   return (
-    <div className="mt-[-10px] text-center md:mt-0 pt-11">
+    <div className="mt-[-10px] py-28 my-28 text-center md:mt-0 pt-11">
       {/* Importing font inside the component */}
       <style>
         {`
@@ -12,8 +12,8 @@ const WelcomeSection = () => {
           }
         `}
       </style>
-      <h2 className="text-white text-4xl md:text-[86px] zen-dots">
-        Icon CrossFit Fitness Studio
+      <h2 className="text-white text-4xl md:text-[73px] leading-tight md:leading-[1.2] zen-dots">
+        ICON CROSSFIT FITNESS STUDIO
       </h2>
     </div>
   );
