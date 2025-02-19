@@ -19,7 +19,6 @@ export default function RootLayout({ children }) {
       <body className={`${geistMono.variable} antialiased`}>
         {children}
         <Header />
-        <WelcomeSection />
       </body>
     </html>
   );

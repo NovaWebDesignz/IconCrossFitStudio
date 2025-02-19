@@ -2,7 +2,7 @@ import React from "react";
 
 const WelcomeSection = () => {
   return (
-    <div className="-mt-[98px] text-center md:-mt-28">
+    <div className="mt-[-10px] text-center md:mt-0 pt-11">
       {/* Importing font inside the component */}
       <style>
         {`
