@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const HeroSection = () => {
   return (
-    <section className="relative w-full max-w-[98%] h-[80vh] md:h-[85vh] flex items-center justify-end bg-gray-900 mt-[45px] rounded-2xl overflow-hidden mx-auto">
+    <section className="relative w-full max-w-[98%] h-[80vh] md:h-[93vh] flex items-center justify-end bg-gray-900 mt-[45px] rounded-2xl overflow-hidden mx-auto">
       <Image
         src="/images/Homepage_image1.jpg"
         alt="Hero Section"
