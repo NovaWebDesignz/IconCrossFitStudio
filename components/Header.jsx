@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const Header = () => {
   return (
-    <header className="fixed top-8 left-1/2 -translate-x-1/2 z-50 w-[95%] md:max-w-[85%] mx-auto rounded-xl bg-white/30 backdrop-blur-md shadow-lg">
+    <header className="fixed top-8 left-1/2 -translate-x-1/2 z-50 w-[95%] md:max-w-[85%] mx-auto rounded-2xl bg-white/30 backdrop-blur-md shadow-lg">
       <div className="flex flex-col items-center justify-between w-full px-6 py-[6px] md:flex-row md:px-12">
         
         {/* Logo - Left */}

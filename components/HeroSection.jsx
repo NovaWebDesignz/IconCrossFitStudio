@@ -2,17 +2,21 @@ import Image from "next/image";
 
 const HeroSection = () => {
   return (
-    <section className="relative w-full max-w-[98%] h-[80vh] flex items-center justify-center bg-gray-900 mt-[530px] md:mt-[540px] rounded-2xl overflow-hidden mx-auto">
+    <section className="relative w-full max-w-[98%] h-[80vh] flex items-center justify-end bg-gray-900 mt-[530px] md:mt-[540px] rounded-2xl overflow-hidden mx-auto">
       <Image
         src="/images/Homepage_image1.jpg"
         alt="Hero Section"
         fill
         className="absolute inset-0 object-cover w-full h-full"
       />
-      <div className="relative z-10 text-center text-white">
-        <h1 className="text-5xl font-bold">Welcome to Icon Gym</h1>
+      {/*
+      <div className="relative z-10 pr-8 text-right text-white md:pr-12">
+        <h1 className="text-5xl font-[750] leading-tight">
+          WELCOME TO <br /> ICON CROSSFIT STUDIO
+        </h1>
         <p className="mt-4 text-lg">Transform your body, transform your life.</p>
       </div>
+      */}
     </section>
   );
 };
