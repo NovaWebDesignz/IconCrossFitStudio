@@ -23,8 +23,8 @@ const Header = () => {
 
         {/* Navigation Links - Centered (Hidden on small screens) */}
         <div className="justify-center flex-1 hidden md:flex">
-          <nav className="flex space-x-4 text-[18px] font-light text-white transition md:space-x-8">
-            {["HOME", "ABOUT", "LOCATION", "PLANS", "EVENTS"].map((item, index) => (
+          <nav className="flex space-x-4 text-[18px] font-bold text-sky-400 transition md:space-x-8">
+            {["ABOUT", "MEMBERSHIP", "EVENTS", "CONTACT"].map((item, index) => (
               <Link 
                 key={index} 
                 href={`/${item.toLowerCase()}`} 
