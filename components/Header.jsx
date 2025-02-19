@@ -1,11 +1,11 @@
 import { FaArrowTurnDown } from "react-icons/fa6";
-import { RxHamburgerMenu } from "react-icons/rx";
+import { CiMenuFries } from "react-icons/ci";
 import Link from "next/link";
 import Image from "next/image";
 
 const Header = () => {
   return (
-    <header className="fixed top-14 left-1/2 -translate-x-1/2 z-50 w-[95%] md:max-w-[75%] mx-auto rounded-2xl bg-white/30 backdrop-blur-md shadow-lg">
+    <header className="fixed top-14 left-1/2 -translate-x-1/2 z-50 w-[92%] md:max-w-[75%] mx-auto rounded-2xl bg-white/20 backdrop-blur-md shadow-lg">
       <div className="flex items-center justify-between w-full px-6 py-[6px] md:px-12">
         
         {/* Logo - Left */}
@@ -52,7 +52,7 @@ const Header = () => {
         {/* Hamburger Menu - Visible on small screens, placed on the right */}
         <div className="flex items-center md:hidden">
           <button className="text-2xl text-white">
-            <RxHamburgerMenu />
+            <CiMenuFries />
           </button>
         </div>
 
