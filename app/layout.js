@@ -3,6 +3,7 @@ import "./globals.css";
 import BeforeHeader from "@/components/BeforeHeader";
 import Header from "@/components/Header";
 import WelcomeSection from "@/components/WelcomeSection";
+import Footer from "@/components/Footer";
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
@@ -21,6 +22,7 @@ export default function RootLayout({ children }) {
         {children}
         <BeforeHeader />
         <Header />
+        <Footer />
       </body>
     </html>
   );
