@@ -17,9 +17,9 @@ const HeroSection = () => {
   return (
     <section className="relative w-full max-w-[96%] md:max-w-[96%] h-[85vh] md:h-[99vh] flex items-center justify-end bg-gray-900 mt-[30px] md:mt-[40px] lg:mt-[52px] rounded-3xl overflow-hidden mx-auto">
       {/* Left Side Text */}
-      <div className="absolute left-4 md:left-10 lg:left-16 top-[30%] md:top-[25%] text-[#e7f3fd] max-w-[80%] md:max-w-[60%] lg:max-w-[40%] z-10">
-        <p className="text-sm md:text-base lg:text-xl pl-3 text-sky-400 font-[650]">
-          Build muscle, lose weight, or improve endurance
+      <div className="absolute left-4 md:left-10 lg:left-16 top-[30%] md:top-[25%] lg:top-[38%] text-[#e7f3fd] max-w-[80%] md:max-w-[60%] lg:max-w-[55%] z-10">
+        <p className="text-xs md:text-sm lg:text-LG pl-2 text-sky-400 font-[700]">
+          BUILD MUSCLE, LOSE WEIGHT, OR IMPROVE ENDURENCE
         </p>
         <h1 className="text-6xl lg:text-[80px] md:text-6xl font-[1000] leading-tight mt-0">
           Own Your <br /> Power, Own <br /> Your Future!
