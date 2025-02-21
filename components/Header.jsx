@@ -1,9 +1,20 @@
+"use client";
+
+import React, { useState } from "react";6
 import { FaArrowTurnDown } from "react-icons/fa6";
-import { CiMenuFries } from "react-icons/ci";
 import Link from "next/link";
 import Image from "next/image";
+import MobileNav from "./MobileNav"; // Import MobileNav for the mobile menu
+import { usePathname } from "next/navigation"; // Import usePathname for current route detection
 
-const Header = () => {
+export default function Header() {
+  const [isOpen, setIsOpen] = useState(false); // State to control the menu toggle
+  const pathname = usePathname(); // Get the current pathname
+
+  // Toggle the mobile menu
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
   return (
     <header className="fixed top-14 left-1/2 -translate-x-1/2 z-50 w-[92%] md:max-w-[85%] mx-auto rounded-2xl bg-white/30 backdrop-blur-md shadow-lg">
       <div className="flex items-center justify-between w-full px-6 py-[6px] md:px-12">
@@ -52,13 +63,11 @@ const Header = () => {
         {/* Hamburger Menu - Visible on small screens, placed on the right */}
         <div className="flex items-center md:hidden">
           <button className="text-2xl text-white">
-            <CiMenuFries />
+            <MobileNav isOpen={isOpen} toggleMenu={toggleMenu} />
           </button>
         </div>
 
       </div>
     </header>
   );
-};
-
-export default Header;
+}
