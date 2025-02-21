@@ -15,7 +15,17 @@ const images = [
 
 const HeroSection = () => {
   return (
-    <section className="relative w-full max-w-[96%] md:max-w-[96%] h-[85vh] md:h-[93vh] flex items-center justify-end bg-gray-900 mt-[30px] md:mt-[52px] rounded-3xl overflow-hidden mx-auto">
+    <section className="relative w-full max-w-[96%] md:max-w-[96%] h-[85vh] md:h-[99vh] flex items-center justify-end bg-gray-900 mt-[30px] md:mt-[40px] lg:mt-[52px] rounded-3xl overflow-hidden mx-auto">
+      {/* Left Side Text */}
+      <div className="absolute left-4 md:left-10 lg:left-16 top-[30%] md:top-[25%] text-[#e7f3fd] max-w-[80%] md:max-w-[60%] lg:max-w-[40%] z-10">
+        <p className="text-sm md:text-base lg:text-xl pl-3 text-sky-400 font-[650]">
+          Build muscle, lose weight, or improve endurance
+        </p>
+        <h1 className="text-6xl lg:text-[80px] md:text-6xl font-[1000] leading-tight mt-0">
+          Own Your <br /> Power, Own <br /> Your Future!
+        </h1>
+      </div>
+
       {/* Slider Wrapper */}
       <div className="absolute inset-0 flex w-[100%] h-full animate-slider">
         {images.map((src, index) => (
@@ -32,19 +42,20 @@ const HeroSection = () => {
 
       <style jsx>{`
         @keyframes slider {
-          0%, 12.5% { transform: translateX(0%); }
-          16%, 25% { transform: translateX(-100%); }
-          28%, 37.5% { transform: translateX(-200%); }
-          41%, 50% { transform: translateX(-300%); }
-          53%, 62.5% { transform: translateX(-400%); }
-          66%, 75% { transform: translateX(-500%); }
-          78%, 87.5% { transform: translateX(-600%); }
-          91%, 100% { transform: translateX(-700%); }
+          0%, 10% { transform: translateX(0%); }
+          12%, 22% { transform: translateX(-100%); transition: transform 1s ease-in-out; }
+          24%, 34% { transform: translateX(-200%); transition: transform 1s ease-in-out; }
+          36%, 46% { transform: translateX(-300%); transition: transform 1s ease-in-out; }
+          48%, 58% { transform: translateX(-400%); transition: transform 1s ease-in-out; }
+          60%, 70% { transform: translateX(-500%); transition: transform 1s ease-in-out; }
+          72%, 82% { transform: translateX(-600%); transition: transform 1s ease-in-out; }
+          84%, 94% { transform: translateX(-700%); transition: transform 1s ease-in-out; }
+          96%, 100% { transform: translateX(-800%); transition: transform 1s ease-in-out; }
         }
 
         .animate-slider {
           display: flex;
-          animation: slider 27s infinite linear;
+          animation: slider 47s infinite ease-in-out;
         }
       `}</style>
     </section>
