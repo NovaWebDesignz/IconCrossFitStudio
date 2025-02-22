@@ -13,8 +13,7 @@ const MobileNav = () => {
   };
 
   const menuItems = [
-    { name: "HOME", link: "/" },
-    { name: "ABOUT", link: "/about" },
+    { name: "ABOUT", link: "/" },
     { name: "MEMBERSHIP", link: "/membership" },
     { name: "EVENTS", link: "/events" },
     { name: "CONTACT", link: "/contact" },

@@ -17,7 +17,7 @@ export default function Header() {
   };
   return (
     <header className="fixed top-14 left-1/2 -translate-x-1/2 z-50 w-[92%] md:max-w-[85%] mx-auto rounded-2xl bg-white/30 backdrop-blur-md shadow-lg">
-      <div className="flex items-center justify-between w-full px-6 py-[6px] md:px-12">
+      <div className="flex items-center justify-between w-full px-6 py-[18px] md:py-[6px] md:px-12">
         
         {/* Logo - Left */}
         <div className="flex items-center -ml-8 md:-ml-24">
@@ -38,7 +38,7 @@ export default function Header() {
             {["ABOUT", "MEMBERSHIP", "EVENTS", "CONTACT"].map((item, index) => (
               <Link 
                 key={index} 
-                href={`/${item.toLowerCase()}`} 
+                href={item === "ABOUT" ? "/" : `/${item.toLowerCase()}`} 
                 className="relative hover:text-gray-300 
                 after:absolute after:-bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-white 
                 after:opacity-0 after:transition-opacity after:duration-300 

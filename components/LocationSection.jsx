@@ -2,7 +2,7 @@ import React from "react";
 
 const LocationSection = () => {
   return (
-    <div className="px-6 py-16 text-white bg-[#181818]">
+    <div className="px-6 py-48 text-black rounded-t-3xl bg-[#f2f3f5]">
       <div className="container flex flex-col items-center justify-between gap-10 mx-auto lg:flex-row">
         {/* Left Side: Newsletter Signup */}
         <div className="text-center lg:w-1/2 lg:text-left">

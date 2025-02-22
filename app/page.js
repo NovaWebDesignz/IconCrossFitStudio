@@ -2,7 +2,8 @@ import Image from "next/image";
 import HeroSection from "@/components/HeroSection";
 import WelcomeSection from "@/components/WelcomeSection";
 import ShortInfo from "@/components/ShortInfo";
-import LocationSection from "@/components/LocationSection";
+
+import { AnimatedTestimonialsDemo } from "@/components/events/animatedtestimonialsdemo";
 
 export default function Home() {
   return (
@@ -10,7 +11,7 @@ export default function Home() {
       <HeroSection />
       <WelcomeSection />
       <ShortInfo />
-      <LocationSection />
+      <AnimatedTestimonialsDemo />
     </div>
   );
 } 
