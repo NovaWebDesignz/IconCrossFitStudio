@@ -1,6 +1,6 @@
 import { Geist_Mono } from "next/font/google";
 import "./globals.css";
-import BeforeHeader from "@/components/BeforeHeader";
+
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import LocationSection from "@/components/LocationSection";
@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${geistMono.variable} antialiased`}>
         {children}
-        <BeforeHeader />
+        
         <Header />
         <LocationSection />
         <Footer />
