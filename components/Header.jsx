@@ -1,25 +1,61 @@
 "use client";
 
-import React, { useState } from "react";6
+import React, { useState, useEffect } from "react";
 import { FaArrowTurnDown } from "react-icons/fa6";
 import Link from "next/link";
 import Image from "next/image";
-import MobileNav from "./MobileNav"; // Import MobileNav for the mobile menu
-import { usePathname } from "next/navigation"; // Import usePathname for current route detection
+import MobileNav from "./MobileNav";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
-  const [isOpen, setIsOpen] = useState(false); // State to control the menu toggle
-  const pathname = usePathname(); // Get the current pathname
+  const [isOpen, setIsOpen] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(true);
+  const pathname = usePathname();
 
-  // Toggle the mobile menu
+  // Toggle mobile menu
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const bgColor = window.getComputedStyle(entry.target).backgroundColor;
+            const rgbValues = bgColor.match(/\d+/g); // Extract RGB values
+
+            if (rgbValues) {
+              const brightness =
+                parseInt(rgbValues[0]) * 0.299 +
+                parseInt(rgbValues[1]) * 0.587 +
+                parseInt(rgbValues[2]) * 0.114;
+
+              setIsDarkMode(brightness > 130);
+            }
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    // Observe sections below the header
+    const sections = document.querySelectorAll("section, div");
+    sections.forEach((section) => observer.observe(section));
+
+    return () => {
+      sections.forEach((section) => observer.unobserve(section));
+    };
+  }, []);
+
   return (
-    <header className="fixed top-14 left-1/2 -translate-x-1/2 z-50 w-[92%] md:max-w-[85%] mx-auto rounded-2xl bg-white/30 backdrop-blur-md shadow-lg">
+    <header
+      className={`fixed top-14 left-1/2 -translate-x-1/2 z-50 w-[92%] md:max-w-[85%] mx-auto rounded-2xl backdrop-blur-md shadow-lg transition-all duration-300
+      ${isDarkMode ? "bg-white/30 text-black" : "bg-black/30 text-white"}`}
+    >
       <div className="flex items-center justify-between w-full px-6 py-[18px] md:py-[6px] md:px-12">
         
-        {/* Logo - Left */}
+        {/* Logo */}
         <div className="flex items-center -ml-8 md:-ml-24">
           <Link href="/" className="relative w-24 h-10 md:h-16 md:w-44">
             <Image 
@@ -32,17 +68,17 @@ export default function Header() {
           </Link>
         </div>
 
-        {/* Navigation Links - Centered (Hidden on small screens) */}
+        {/* Navigation Links */}
         <div className="justify-center flex-1 hidden md:flex">
-          <nav className="flex space-x-4 text-[18px] font-[750] text-white transition md:space-x-8">
+          <nav className="flex space-x-4 text-[18px] font-[750] transition md:space-x-8">
             {["ABOUT", "MEMBERSHIP", "EVENTS", "CONTACT"].map((item, index) => (
               <Link 
                 key={index} 
                 href={item === "ABOUT" ? "/" : `/${item.toLowerCase()}`} 
-                className="relative hover:text-gray-300 
-                after:absolute after:-bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-white 
+                className={`relative hover:text-gray-300 
+                after:absolute after:-bottom-0 after:left-0 after:w-full after:h-[1px] 
                 after:opacity-0 after:transition-opacity after:duration-300 
-                hover:after:opacity-100"
+                hover:after:opacity-100 ${isDarkMode ? "after:bg-black text-black" : "after:bg-white text-white"}`}
               >
                 {item}
               </Link>
@@ -50,19 +86,18 @@ export default function Header() {
           </nav>
         </div>
 
-        {/* Register Button - Right (Hidden on small screens) */}
+        {/* Register Button */}
         <div className="hidden md:flex mt-3 md:-mr-[38px] md:mt-0">
-          <Link href="/register" className="flex items-center gap-3 px-5 py-[9px] text-[15px] md:text-[16px] text-gray-900 transition rounded-2xl 
-                 bg-sky-500 hover:from-yellow-500 hover:to-orange-500">
-            {/* Rotated Arrow Icon */}
-            <FaArrowTurnDown className="text-xs md:text-sm text-[#373737] transform rotate-[-90deg]" />
+          <Link href="/register" className={`flex items-center gap-3 px-5 py-[9px] text-[15px] md:text-[16px] transition rounded-2xl 
+                 ${isDarkMode ? "bg-yellow-400 text-black" : "bg-sky-500 text-white"}`}>
+            <FaArrowTurnDown className="text-xs md:text-sm transform rotate-[-90deg]" />
             Register
           </Link>
         </div>
 
-        {/* Hamburger Menu - Visible on small screens, placed on the right */}
+        {/* Mobile Menu */}
         <div className="flex items-center md:hidden">
-          <button className="text-2xl text-white">
+          <button className="text-2xl">
             <MobileNav isOpen={isOpen} toggleMenu={toggleMenu} />
           </button>
         </div>
