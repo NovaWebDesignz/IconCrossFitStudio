@@ -47,7 +47,7 @@ export default function Header() {
     return () => {
       sections.forEach((section) => observer.unobserve(section));
     };
-  }, []);
+  }, []); 
 
   return (
     <header
