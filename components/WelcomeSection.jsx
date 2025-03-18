@@ -1,23 +1,14 @@
 import React from "react";
+import { Cover } from "@/components/ui/cover";
 
-const WelcomeSection = () => {
+export default function WelcomeSection() {
   return (
-    <div className="relative mt-[-138px] mb-20 md:mb-48 lg:mb-40 py-0 z-10 my-6 text-center md:-mt-52 pt-11">
-      {/* Importing font inside the component */}
-      <style>
-        {`
-          @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Text:wght@100..900&display=swap');
-          .big-shoulders {
-            font-family: "Big Shoulders Text";
-            font-weight: 900;
-          }
-        `}
-      </style>
-      <h2 className="text-black text-3xl sm:text-5xl md:text-[72px] bg-sky-400 leading-tight md:leading-[1.2] big-shoulders">
-        ICON CROSSFIT FITNESS STUDIO
-      </h2>
+    <div className="relative w-full bg-sky-400 py-2 -mt-32 mb-28 flex justify-center items-center">
+      <h1
+        className="text-4xl md:text-4xl lg:text-4xl font-semibold text-center max-w-7xl mx-auto relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-700 dark:from-neutral-800 dark:via-white dark:to-white"
+      >
+        Train Hard. <Cover>Move Fast</Cover> Stay Strong.
+      </h1>
     </div>
   );
-};
-
-export default WelcomeSection;
+}

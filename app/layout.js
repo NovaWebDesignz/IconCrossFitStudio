@@ -1,6 +1,6 @@
 import { Geist_Mono } from "next/font/google";
 import "./globals.css";
-
+import { ThemeProvider } from "next-themes";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import LocationSection from "@/components/LocationSection";
@@ -17,13 +17,16 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={`${geistMono.variable} antialiased`}>
-        {children}
-        
-        <Header />
-        <LocationSection />
-        <Footer />
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
+          <div className="min-h-screen bg-white dark:bg-[#171717] transition-colors duration-300">
+            <Header />
+            {children}
+            <LocationSection />
+            <Footer />
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );

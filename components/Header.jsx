@@ -6,6 +6,7 @@ import Link from "next/link";
 import Image from "next/image";
 import MobileNav from "./MobileNav";
 import { usePathname } from "next/navigation";
+import ThemeToggle from "./ThemeToggle";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -50,7 +51,7 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-14 left-1/2 -translate-x-1/2 z-50 w-[92%] md:max-w-[85%] mx-auto rounded-2xl backdrop-blur-md shadow-lg transition-all duration-300
+      className={`fixed top-0 left-1/2 -translate-x-1/2 z-50 w-[82%] md:max-w-full mx-auto rounded-2xl backdrop-blur-md shadow-lg transition-all duration-300
       ${isDarkMode ? "bg-white/30 text-black" : "bg-black/30 text-white"}`}
     >
       <div className="flex items-center justify-between w-full px-6 py-[18px] md:py-[6px] md:px-12">
@@ -70,8 +71,8 @@ export default function Header() {
 
         {/* Navigation Links */}
         <div className="justify-center flex-1 hidden md:flex">
-          <nav className="flex space-x-4 text-[18px] font-[750] transition md:space-x-8">
-            {["ABOUT", "MEMBERSHIP", "EVENTS", "CONTACT"].map((item, index) => (
+          <nav className="flex space-x-4 text-[18px] font-[650] transition md:space-x-8">
+            {["ABOUT", "LOCATION", "EVENTS", "CONTACT"].map((item, index) => (
               <Link 
                 key={index} 
                 href={item === "ABOUT" ? "/" : `/${item.toLowerCase()}`} 
@@ -84,6 +85,10 @@ export default function Header() {
               </Link>
             ))}
           </nav>
+        </div>
+
+        <div className="hidden lg:flex md:-ml-8 md:pr-5">
+          <ThemeToggle />
         </div>
 
         {/* Register Button */}
