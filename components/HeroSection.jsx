@@ -12,7 +12,7 @@ const images = [
   "/images/Homepage_image7.jpg",
   "/images/Homepage_image8.jpg", 
 ];
-
+ 
 const HeroSection = () => {
   return (
     <section className="relative w-full max-w-[95%] md:max-w-[98%] h-[91vh] md:h-[100vh] flex items-center justify-end bg-gray-900 mt-[50px] md:mt-[30px] lg:mt-[8px] rounded-3xl overflow-hidden mx-auto">
