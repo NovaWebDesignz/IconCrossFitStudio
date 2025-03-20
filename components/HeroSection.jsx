@@ -10,7 +10,7 @@ const images = [
   "/images/Homepage_image5.jpg",
   "/images/Homepage_image6.jpg",
   "/images/Homepage_image7.jpg",
-  "/images/Homepage_image8.jpg",
+  "/images/Homepage_image8.jpg", 
 ];
 
 const HeroSection = () => {
