@@ -15,7 +15,7 @@ const images = [
 
 const HeroSection = () => {
   return (
-    <section className="relative w-full max-w-[95%] md:max-w-[99%] h-[72vh] md:h-[100vh] flex items-center justify-end bg-gray-900 mt-[30px] md:mt-[40px] lg:mt-[8px] rounded-3xl overflow-hidden mx-auto">
+    <section className="relative w-full max-w-[95%] md:max-w-[98%] h-[91vh] md:h-[100vh] flex items-center justify-end bg-gray-900 mt-[50px] md:mt-[30px] lg:mt-[8px] rounded-3xl overflow-hidden mx-auto">
       {/* Left Side Text */}
       <div className="absolute left-4 md:left-10 lg:left-16 top-[30%] md:top-[25%] lg:top-[28%] text-[#e7f3fd] max-w-[80%] md:max-w-[60%] lg:max-w-[55%] z-10">
         {/*

@@ -51,7 +51,7 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-1/2 -translate-x-1/2 z-50 w-[82%] md:max-w-full mx-auto rounded-2xl backdrop-blur-md shadow-lg transition-all duration-300
+      className={`fixed top-4 md:top-0 left-1/2 -translate-x-1/2 z-50 w-[82%] md:max-w-full mx-auto rounded-2xl backdrop-blur-md shadow-lg transition-all duration-300
       ${isDarkMode ? "bg-white/30 text-black" : "bg-black/30 text-white"}`}
     >
       <div className="flex items-center justify-between w-full px-6 py-[18px] md:py-[6px] md:px-12">
