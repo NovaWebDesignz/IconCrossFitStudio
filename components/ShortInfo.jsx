@@ -3,7 +3,7 @@ import { TbNorthStar } from "react-icons/tb";
 
 const ShortInfo = () => {
   return (
-    <div className="relative w-full max-w-[95%] md:max-w-[98%] h-auto md:h-auto  mt-[45px] pt-32 rounded-2xl overflow-hidden mx-auto flex flex-col items-center px-6 py-24 text-center bg-gray-100">
+    <div className="relative w-full max-w-[95%] md:max-w-[98%] h-auto md:h-auto  mt-[45px] pt-12 md:pt-32 rounded-2xl overflow-hidden mx-auto flex flex-col items-center px-6 py-12 md:py-24 text-center bg-gray-100">
       {/* Star Icon */}
       <TbNorthStar className="mb-4 text-6xl text-black" />
 
