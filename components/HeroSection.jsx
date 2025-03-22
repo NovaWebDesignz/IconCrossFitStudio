@@ -15,17 +15,18 @@ const images = [
  
 const HeroSection = () => {
   return (
-    <section className="relative w-full max-w-[95%] md:max-w-[98%] h-[91vh] md:h-[100vh] flex items-center justify-end bg-gray-900 mt-[50px] md:mt-[30px] lg:mt-[8px] rounded-3xl overflow-hidden mx-auto">
+    <section className="relative w-full max-w-[94%] sm:max-w-[95%] md:max-w-[98%] h-[80vh] sm:h-[91vh] md:h-[100vh] flex items-center justify-end bg-gray-900 mt-[50px] md:mt-[30px] lg:mt-[8px] rounded-3xl overflow-hidden mx-auto">
       {/* Left Side Text */}
-      <div className="absolute left-4 md:left-10 lg:left-16 top-[30%] md:top-[25%] lg:top-[28%] text-[#e7f3fd] max-w-[80%] md:max-w-[60%] lg:max-w-[55%] z-10">
-        {/*
-        <p className="text-xs md:text-sm lg:text-LG pl-2 text-sky-400 font-[700]">
-          BUILD MUSCLE, LOSE WEIGHT, OR IMPROVE ENDURENCE
+      <div className="absolute left-6 md:left-8 lg:left-14 xl:left-24 top-[14%] sm:top-[13%] md:top-[20%] lg:top-[15%] text-white max-w-[70%] sm:max-w-[65%] md:max-w-[60%] lg:max-w-[60%] xl:max-w-[40%] z-10">
+        <p className="text-xs md:text-sm lg:text-md px-3 py-1 bg-gray-800 text-white font-semibold uppercase rounded-lg inline-block tracking-wider">
+          Welcome to Icon Gym
         </p>
-        */}
-        <h1 className="text-[35px] sm:text-[55px] lg:text-[80px] md:text-6xl font-[700] leading-tight mt-0">
-        Get fit with 
+        <h1 className="text-[35px] sm:text-[55px] lg:text-[80px] md:text-6xl font-extrabold leading-tight mt-4">
+          Energize Your Life <br /> with Our <span className="text-sky-400">Fitness Center</span>
         </h1>
+        <button className="mt-6 px-6 py-3 bg-sky-500 hover:bg-sky-600 text-white font-semibold rounded-lg text-lg shadow-md transition-all">
+          Discover More
+        </button>
       </div>
 
       {/* Slider Wrapper */}
