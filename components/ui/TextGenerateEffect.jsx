@@ -5,7 +5,6 @@ import { cn } from "@/lib/utils";
 
 const TextGenerateEffect = ({ words, className, filter = true, duration = 0.5 }) => {
   const [scope, animate] = useAnimate();
-  let wordsArray = words.split(" ");
 
   useEffect(() => {
     animate(
@@ -23,16 +22,41 @@ const TextGenerateEffect = ({ words, className, filter = true, duration = 0.5 })
 
   return (
     <div className={cn("font-bold", className)}>
-      <motion.div ref={scope} className="mt-4 text-[35px] sm:text-[55px] lg:text-[80px] md:text-6xl font-extrabold mt-4 leading-snug tracking-wide">
-        {wordsArray.map((word, idx) => (
-          <motion.span
-            key={word + idx}
-            className="dark:text-white text-black opacity-0"
-            style={{ filter: filter ? "blur(10px)" : "none" }}
-          >
-            {word}{" "}
-          </motion.span>
-        ))}
+      <motion.div ref={scope} className="mt-4 text-[35px] sm:text-[55px] lg:text-[80px] md:text-6xl font-extrabold leading-snug tracking-wide">
+        {words.split(" ").map((word, idx) => {
+          // Check if "Fitness Center" is being rendered together
+          if (word === "Fitness") {
+            return (
+              <motion.span
+                key={word + idx}
+                className="text-sky-400 opacity-0"
+                style={{ filter: filter ? "blur(10px)" : "none" }}
+              >
+                {word}{" "}
+              </motion.span>
+            );
+          }
+          if (word === "Center") {
+            return (
+              <motion.span
+                key={word + idx}
+                className="text-sky-400 opacity-0"
+                style={{ filter: filter ? "blur(10px)" : "none" }}
+              >
+                {word}{" "}
+              </motion.span>
+            );
+          }
+          return (
+            <motion.span
+              key={word + idx}
+              className="dark:text-white text-black opacity-0"
+              style={{ filter: filter ? "blur(10px)" : "none" }}
+            >
+              {word}{" "}
+            </motion.span>
+          );
+        })}
       </motion.div>
     </div>
   );

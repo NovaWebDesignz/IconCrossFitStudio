@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import TextGenerateEffect from "./ui/TextGenerateEffect";
 
@@ -15,10 +16,18 @@ const images = [
 ];
  
 const HeroSection = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => setIsVisible(true), 100); // Delay appearance
+  }, []);
+
   return (
     <section className="relative w-full max-w-[94%] sm:max-w-[95%] md:max-w-[98%] h-[80vh] sm:h-[91vh] md:h-[100vh] flex items-center justify-end bg-gray-900 mt-[95px] md:mt-[30px] lg:mt-[8px] rounded-3xl overflow-hidden mx-auto">
+      {/* Glowing Blur Light Effect */}
+      <div className="absolute left-6 md:left-8 lg:left-12 xl:left-24 top-[14%] sm:top-[13%] md:top-[20%] lg:top-[21%] w-[260px] sm:w-[410px] h-[268px] sm:h-[350px] md:w-[440px] lg:w-[580px] md:h-[304px] lg:h-[322px] bg-black opacity-65 blur-2xl z-[5]"></div>
       {/* Left Side Text */}
-      <div className="absolute left-6 md:left-8 lg:left-14 xl:left-24 top-[14%] sm:top-[13%] md:top-[20%] lg:top-[15%] text-white max-w-[70%] sm:max-w-[65%] md:max-w-[60%] lg:max-w-[60%] xl:max-w-[40%] z-10">
+      <div className="absolute left-6 md:left-8 lg:left-14 xl:left-24 top-[14%] sm:top-[13%] md:top-[20%] lg:top-[18%] xl:top-[20%] text-white max-w-[70%] sm:max-w-[65%] md:max-w-[60%] lg:max-w-[60%] xl:max-w-[45%] z-10">
         <p className="text-xs md:text-sm lg:text-md px-3 py-1 bg-gray-800 text-white font-semibold uppercase rounded-lg inline-block tracking-wider">
           Welcome to Icon Gym
         </p>
@@ -27,8 +36,8 @@ const HeroSection = () => {
           words="Energize Your Life with Our Fitness Center"
           className="text-[35px] sm:text-[55px] lg:text-[80px] md:text-6xl font-extrabold leading-tight mt-4"
         />
-        <button className="mt-6 px-6 py-3 bg-sky-500 hover:bg-sky-600 text-white font-semibold rounded-lg text-lg shadow-md transition-all">
-          Discover More
+        <button className={`mt-6 px-6 py-3 bg-sky-500 hover:bg-sky-600 text-white font-semibold rounded-lg text-lg shadow-md transition-opacity duration-700 delay-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+          Get Started
         </button>
       </div>
 
