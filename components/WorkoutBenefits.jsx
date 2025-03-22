@@ -4,46 +4,53 @@ import { Dancing_Script } from 'next/font/google';
 const dancingScript = Dancing_Script({ subsets: ['latin'], weight: '700' });
 
 const benefits = [
-    {
-      title: '100% GUARANTEED RESULTS',
-      description: 'We ensure you achieve your fitness goals with proven techniques and dedicated training sessions.',
-      image: 'https://images.pexels.com/photos/13679951/pexels-photo-13679951.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-    },
-    {
-      title: 'WE TRAIN FOR ALL AGE GROUPS',
-      description: 'From kids to seniors, our training programs cater to all age groups with customized workout plans.',
-      image: 'https://source.unsplash.com/800x1200/?family,workout',
-    },
-    {
-      title: 'SPECIAL CARE FOR CHILDREN, WOMEN & AGED PEOPLE',
-      description: 'Extra attention and personalized training for children, women, and elderly individuals to ensure safe and effective workouts. 🤝',
-      image: 'https://source.unsplash.com/800x1200/?care,training',
-    },
-    {
-      title: 'QUALIFIED TRAINERS FOR QUALITY TRAINING',
-      description: 'Our certified trainers bring expertise and experience to deliver high-quality, effective training.',
-      image: 'https://source.unsplash.com/800x1200/?trainer,gym',
-    },
-    {
-        title: 'EASY TO FOLLOW',
-        description: 'Workouts are presented in an easy-to-follow manner. So, do it right without losing the momentum.',
-        image: 'https://images.pexels.com/photos/30672394/pexels-photo-30672394/free-photo-of-man-exercising-with-dumbbells-in-gym.jpeg?auto=compress&cs=tinysrgb&w=800&h=1200&dpr=1',
-    },
-    {
-        title: 'SET YOUR OWN PACE',
-        description: 'Work out at a pace that best suits you. Be the boss and take control of your workout routine!',
-        image: 'https://images.pexels.com/photos/30672394/pexels-photo-30672394/free-photo-of-man-exercising-with-dumbbells-in-gym.jpeg?auto=compress&cs=tinysrgb&w=800&h=1200&dpr=1',
-    },
-  ];
-  
+  {
+    title: "100% GUARANTEED RESULTS",
+    description:
+      "We ensure you achieve your fitness goals with proven techniques and dedicated training sessions.",
+    image: "/images/benefits_1.jpg",
+  },
+  {
+    title: "WE TRAIN FOR ALL AGE GROUPS",
+    description:
+      "From kids to seniors, our training programs cater to all age groups with customized workout plans.",
+    image: "/images/benefits_2.jpg",
+  },
+  {
+    title: "SPECIAL CARE FOR CHILDREN, WOMEN & AGED PEOPLE",
+    description:
+      "Extra attention and personalized training for children, women, and elderly individuals to ensure safe and effective workouts. 🤝",
+    image: "/images/benefits_3.jpg",
+  },
+  {
+    title: "QUALIFIED TRAINERS FOR QUALITY TRAINING",
+    description:
+      "Our certified trainers bring expertise and experience to deliver high-quality, effective training.",
+    image: "/images/benefits_4.jpg",
+  },
+  {
+    title: "EASY TO FOLLOW",
+    description:
+      "Workouts are presented in an easy-to-follow manner. So, do it right without losing the momentum.",
+    image: "/images/benefits_5.jpg",
+  },
+  {
+    title: "SET YOUR OWN PACE",
+    description:
+      "Work out at a pace that best suits you. Be the boss and take control of your workout routine!",
+    image: "/images/benefits_6.jpg",
+  },
+];
 
 export default function WorkoutBenefits() {
   return (
-    <section className="max-w-6xl mx-auto px-4 py-12">
-      <h2 className={`${dancingScript.className} text-red-600 italic text-xl font-semibold`}>
-        Benefits of <span className="font-bold">Insanely Powerful</span>
-      </h2>
-      <h1 className="text-4xl font-bold">HOME WORKOUTS</h1>
+    <section className="max-w-6xl mx-auto px-1 py-12">
+      <div className='lg:-mx-10 md:mx-5 mx-4'>
+        <h2 className={`${dancingScript.className} text-red-600 italic text-4xl font-semibold`}>
+          Why Choose Us?
+        </h2>
+        <h1 className="lg:text-6xl md:text-5xl text-3xl font-bold">Unlock the Best Gym Training Experience</h1>
+      </div>
 
       <div className="grid md:grid-cols-3 gap-6 mt-8">
         {benefits.map((item, index) => (
