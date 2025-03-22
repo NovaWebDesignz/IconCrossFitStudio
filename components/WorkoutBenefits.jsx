@@ -52,7 +52,7 @@ export default function WorkoutBenefits() {
         <h1 className="lg:text-6xl md:text-5xl text-3xl font-bold">Unlock the Best Gym Training Experience</h1>
       </div>
 
-      <div className="grid md:grid-cols-3 gap-6 mt-8">
+      <div className="grid grid-cols-2 md:grid-cols-3 mx-4 md:mx-12 lg:mx-auto gap-6 mt-8">
         {benefits.map((item, index) => (
           <div key={index} className="relative group overflow-hidden shadow-lg">
             {index % 2 === 0 ? (
