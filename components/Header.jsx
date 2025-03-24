@@ -11,48 +11,16 @@ import ThemeToggle from "./ThemeToggle";
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(true);
-  const pathname = usePathname();
 
   // Toggle mobile menu
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const bgColor = window.getComputedStyle(entry.target).backgroundColor;
-            const rgbValues = bgColor.match(/\d+/g); // Extract RGB values
-
-            if (rgbValues) {
-              const brightness =
-                parseInt(rgbValues[0]) * 0.299 +
-                parseInt(rgbValues[1]) * 0.587 +
-                parseInt(rgbValues[2]) * 0.114;
-
-              setIsDarkMode(brightness > 130);
-            }
-          }
-        });
-      },
-      { threshold: 0.5 }
-    );
-
-    // Observe sections below the header
-    const sections = document.querySelectorAll("section, div");
-    sections.forEach((section) => observer.observe(section));
-
-    return () => {
-      sections.forEach((section) => observer.unobserve(section));
-    };
-  }, []); 
 
   return (
     <header
-      className={`fixed top-4 md:top-3 left-1/2 -translate-x-1/2 z-50 w-[95%] md:max-w-full mx-auto rounded-2xl backdrop-blur-md shadow-lg transition-all duration-300
-      ${isDarkMode ? "bg-white/50 text-black" : "bg-black/50 text-white"}`}
+      className={`fixed top-4 md:top-3 left-1/2 -translate-x-1/2 z-50 w-[95%] md:max-w-full mx-auto rounded-2xl bg-sky-300 shadow-lg transition-all duration-300 `}
     >
       <div className="flex items-center justify-between w-full px-6 py-[18px] md:py-[6px] md:px-12">
         
@@ -76,7 +44,7 @@ export default function Header() {
               <Link 
                 key={index} 
                 href={item === "ABOUT" ? "/" : `/${item.toLowerCase()}`} 
-                className={`relative hover:text-gray-300 
+                className={`relative hover:text-gray-600 
                 after:absolute after:-bottom-0 after:left-0 after:w-full after:h-[1px] 
                 after:opacity-0 after:transition-opacity after:duration-300 
                 hover:after:opacity-100 ${isDarkMode ? "after:bg-black text-black" : "after:bg-white text-white"}`}
@@ -93,8 +61,7 @@ export default function Header() {
 
         {/* Register Button */}
         <div className="hidden md:flex mt-3 md:-mr-[38px] md:mt-0">
-          <Link href="/register" className={`flex items-center gap-3 px-5 py-[9px] text-[15px] md:text-[16px] transition rounded-2xl 
-                 ${isDarkMode ? "bg-yellow-400 text-black" : "bg-sky-500 text-white"}`}>
+          <Link href="/register" className={`flex items-center gap-3 px-5 py-[9px] text-[15px] md:text-[16px] transition rounded-2xl bg-gray-700 hover:bg-gray-300 text-white hover:text-black`}>
             <FaArrowTurnDown className="text-xs md:text-sm transform rotate-[-90deg]" />
             Register
           </Link>

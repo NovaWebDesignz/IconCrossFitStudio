@@ -5,14 +5,14 @@ import Image from "next/image";
 import TextGenerateEffect from "./ui/TextGenerateEffect";
 
 const images = [
-  "/images/Homepage_image1.jpg",
+  "/images/Homepage_image8.jpg",
   "/images/Homepage_image2.jpg",
   "/images/Homepage_image3.jpg",
   "/images/Homepage_image4.jpg",
   "/images/Homepage_image5.jpg",
   "/images/Homepage_image6.jpg",
   "/images/Homepage_image7.jpg",
-  "/images/Homepage_image8.jpg", 
+  "/images/Homepage_image1.jpg", 
 ];
  
 const HeroSection = () => {
