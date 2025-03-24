@@ -22,7 +22,7 @@ const TextGenerateEffect = ({ words, className, filter = true, duration = 0.5 })
 
   return (
     <div className={cn("font-bold", className)}>
-      <motion.div ref={scope} className="mt-4 text-[35px] sm:text-[55px] lg:text-[80px] md:text-6xl font-extrabold leading-snug tracking-wide">
+      <motion.div ref={scope} className="mt-4 text-[30px] sm:text-[45px] lg:text-[60px] md:text-6xl font-extrabold leading-snug tracking-wide">
         {words.split(" ").map((word, idx) => {
           // Check if "Fitness Center" is being rendered together
           if (word === "Fitness") {
