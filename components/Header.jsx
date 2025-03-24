@@ -20,13 +20,13 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-4 md:top-3 left-1/2 -translate-x-1/2 z-50 w-[95%] md:max-w-full mx-auto rounded-2xl bg-sky-300 shadow-lg transition-all duration-300 `}
+      className={`fixed -top-1 z-50 w-[100%] md:max-w-full mx-auto bg-sky-300 shadow-lg transition-all duration-300 `}
     >
-      <div className="flex items-center justify-between w-full px-6 py-[18px] md:py-[6px] md:px-12">
+      <div className="flex items-center justify-between w-full px-6 py-[24px] md:py-[24px] md:px-20">
         
         {/* Logo */}
         <div className="flex items-center -ml-8 md:-ml-24">
-          <Link href="/" className="relative w-24 h-10 md:h-16 md:w-44">
+          <Link href="/" className="relative w-32 h-16 md:h-20 md:w-48">
             <Image 
               src="/IconCrossfit_Logo.png" 
               alt="Icon CrossFit Logo" 
