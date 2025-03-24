@@ -22,7 +22,7 @@ export default function Header() {
     <header
       className={`fixed -top-1 z-50 w-[100%] md:max-w-full mx-auto bg-sky-300 shadow-lg transition-all duration-300 `}
     >
-      <div className="flex items-center justify-between w-full px-6 py-[24px] md:py-[24px] md:px-20">
+      <div className="flex items-center justify-between w-full px-6 py-[24px] md:py-[18px] md:px-20">
         
         {/* Logo */}
         <div className="flex items-center -ml-8 md:-ml-24">
