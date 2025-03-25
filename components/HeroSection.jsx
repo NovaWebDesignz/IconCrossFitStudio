@@ -23,9 +23,9 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="relative w-full max-w-[94%] sm:max-w-[95%] md:max-w-[98%] h-[80vh] sm:h-[91vh] md:h-[100vh] flex items-center justify-end bg-gray-900 mt-[135px] md:mt-[142px] lg:mt-[140px] rounded-3xl overflow-hidden mx-auto">
+    <section className="relative w-full max-w-[100%] h-[80vh] sm:h-[91vh] md:h-[100vh] flex items-center justify-end bg-gray-900 mt-[110px] md:mt-[115px] lg:mt-[115px] overflow-hidden mx-auto">
       {/* Glowing Blur Light Effect */}
-      <div className="absolute left-6 md:left-8 lg:left-12 xl:left-24 top-[14%] sm:top-[13%] md:top-[20%] lg:top-[21%] w-[260px] sm:w-[410px] h-[268px] sm:h-[350px] md:w-[440px] lg:w-[580px] md:h-[304px] lg:h-[322px] bg-black opacity-65 blur-2xl z-[5]"></div>
+      <div className="absolute left-6 md:left-8 lg:left-12 xl:left-20 top-[14%] sm:top-[13%] md:top-[20%] lg:top-[21%] w-[260px] sm:w-[410px] h-[268px] sm:h-[350px] md:w-[440px] lg:w-[580px] xl:w-[450px] md:h-[304px] lg:h-[322px] bg-black opacity-65 blur-2xl z-[5]"></div>
       {/* Left Side Text */}
       <div className="absolute left-6 md:left-8 lg:left-14 xl:left-24 top-[14%] sm:top-[13%] md:top-[20%] lg:top-[18%] xl:top-[20%] text-white max-w-[70%] sm:max-w-[65%] md:max-w-[60%] lg:max-w-[60%] xl:max-w-[32%] z-10">
         <p className="text-xs md:text-sm lg:text-md px-3 py-1 bg-gray-800 text-white font-semibold uppercase rounded-lg inline-block tracking-wider">
