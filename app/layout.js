@@ -1,4 +1,9 @@
+"use client";
+
 import { Geist_Mono } from "next/font/google";
+import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
+import Loader from "@/components/Loader";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
 import Header from "@/components/Header";
@@ -10,12 +15,16 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata = {
-  title: "Icon CrossFit Studio",
-  description: "Embark on your Fitness Journey",
-};
-
 export default function RootLayout({ children }) {
+  const [loading, setLoading] = useState(true);
+  const pathname = usePathname(); // Detects route changes
+
+  useEffect(() => {
+    setLoading(true);
+    const timer = setTimeout(() => setLoading(false), 1000); // Adjust time as needed
+    return () => clearTimeout(timer);
+  }, [pathname]); // Runs effect on every route change
+
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
@@ -24,12 +33,16 @@ export default function RootLayout({ children }) {
       </head>
       <body className={`${geistMono.variable} antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
-          <div className="min-h-screen bg-white dark:bg-[#171717] transition-colors duration-300">
-            <Header />
-            {children}
-            <LocationSection />
-            <Footer />
-          </div>
+        {loading ? (
+            <Loader />
+          ) : (
+            <div className="min-h-screen bg-white dark:bg-[#171717] transition-colors duration-300">
+              <Header />
+              {children}
+              <LocationSection />
+              <Footer />
+            </div>
+          )}
         </ThemeProvider>
       </body>
     </html>

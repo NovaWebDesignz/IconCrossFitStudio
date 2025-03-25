@@ -54,7 +54,7 @@ export default function WorkoutBenefits() {
 
       <div className="grid grid-cols-2 md:grid-cols-3 mx-4 md:mx-12 lg:mx-auto gap-6 mt-8">
         {benefits.map((item, index) => (
-          <div key={index} className="relative group overflow-hidden shadow-lg">
+          <div key={index} className="relative group overflow-hidden ">
             {index % 2 === 0 ? (
               // Square Image on Top, Text Below
               <>
