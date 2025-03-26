@@ -13,7 +13,7 @@ const ThemeToggle = () => {
   return (
     <button
       onClick={() => setTheme(isDark ? "light" : "dark")}
-      className="flex items-center w-14 h-8 bg-gray-300 dark:bg-gray-700 rounded-full p-1 transition-all duration-300"
+      className="flex items-center w-14 h-8 bg-gray-300 dark:bg-gray-700 rounded-full p-1 transition-all duration-300" aria-label="Theme Toggle"
     >
       <div
         className={`w-5 h-5 bg-white dark:bg-black rounded-full shadow-md transform transition-all duration-300 ${

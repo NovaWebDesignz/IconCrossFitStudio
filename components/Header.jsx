@@ -60,14 +60,14 @@ export default function Header() {
               href="/register"
               className="flex items-center gap-3 px-5 py-[9px] text-[15px] lg:text-[16px] transition rounded-2xl bg-gray-700 hover:bg-gray-300 text-white hover:text-black"
             >
-              <FaArrowTurnDown className="text-xs lg:text-sm transform rotate-[-90deg]" />
+              <FaArrowTurnDown className="text-xs lg:text-sm transform rotate-[-90deg]" aria-label="Open Register Page" />
               Register
             </Link>
           </div>
 
           {/* Mobile Menu (Visible only on small screens) */}
           <div className="flex lg:hidden">
-            <button className="text-2xl">
+            <button className="text-2xl" aria-label="Open mobile menu">
               <MobileNav isOpen={isOpen} toggleMenu={toggleMenu} isDarkMode={isDarkMode} />
             </button>
           </div>
