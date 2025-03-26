@@ -1,8 +1,7 @@
-import Image from "next/image";
 import HeroSection from "@/components/HeroSection";
 import WelcomeSection from "@/components/WelcomeSection";
 import ShortInfo from "@/components/ShortInfo";
-import { StickyScrollRevealDemo } from "@/components/StickyScrollRevealDemo";
+import WorkoutBenefits from "@/components/WorkoutBenefits";
 
 import { AnimatedTestimonialsDemo } from "@/components/events/animatedtestimonialsdemo";
 
@@ -17,7 +16,7 @@ export default function Home() {
       <HeroSection />
       <WelcomeSection />
       <ShortInfo />
-      <StickyScrollRevealDemo />
+      <WorkoutBenefits />
       <AnimatedTestimonialsDemo />
     </div>
   );
