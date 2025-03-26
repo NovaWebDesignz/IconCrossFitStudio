@@ -1,6 +1,6 @@
 export default function Loader() {
     return (
-      <div className="fixed inset-0 flex items-center justify-center bg-white dark:bg-black transition-opacity duration-500">
+      <div className="fixed inset-0 flex items-center justify-center bg-black dark:bg-black transition-opacity duration-500">
         <img 
           src="/images/LoaderGif.gif" 
           alt="Loading..." 
