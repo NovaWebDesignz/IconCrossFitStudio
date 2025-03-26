@@ -55,7 +55,7 @@ export default function Header() {
           </nav>
         </div>
 
-        <div className="hidden lg:flex md:-ml-8 md:pr-5">
+        <div className="flex -mr-60 sm:-mr-96 md:mr-5 lg:mr-5 xl:mr-10">
           <ThemeToggle />
         </div>
 

@@ -9,13 +9,13 @@ const ShortInfo = () => {
 
       {/* Heading */}
       <h2 className="mb-4 text-3xl font-extrabold text-black md:text-5xl">
-        FITNESS SHOULD BE <br /> ACCESSIBLE TO EVERYONE.
+      FITNESS POWERED BY PEOPLE, <br />  NOT MACHINES.
       </h2>
 
       {/* Description */}
       <p className="max-w-2xl mb-6 text-base text-gray-700 md:text-lg">
-        Whether you're a seasoned athlete or just starting out, we have a variety of equipment and classes to suit your needs. 
-        Our cardio machines, weight lifting equipment, and functional training areas provide a comprehensive workout experience.
+        We believe in the strength of human potential. Our focus is on CrossFit training, emphasizing functional movements and dynamic workouts. 
+        Whether you're new to fitness or an experienced athlete, our expert-led training sessions will help you push your limits—without relying on machines.
       </p>
 
       {/* Button */}
