@@ -3,7 +3,7 @@ import { FaFacebook, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className="px-6 py-44 text-white bg-black md:px-20">
+    <footer className="px-6 py-24 text-white bg-black md:px-20">
       <div className="container grid grid-cols-1 gap-8 mx-auto text-center md:grid-cols-4 md:text-left">
         {/* Logo & Contact */}
         <div>
@@ -91,16 +91,10 @@ export default function Footer() {
           <p className="font-semibold text-yellow-500">+91 99xxx-xxxxx</p>
         </div>
       </div>
-
+      <hr className="w-96 border-t border-gray-300 mb-4 mt-10 mx-auto" />
       {/* Copyright & Back to Top */}
-      <div className="flex flex-col items-center justify-between mt-10 text-sm text-gray-500 md:flex-row">
+      <div className="flex flex-col items-center justify-center mt-1 text-sm text-gray-500 md:flex-row">
         <p>Copyright © ICON CROSSFIT. All Rights Reserved.</p>
-        <a
-          href="#"
-          className="p-3 mt-4 bg-gray-700 rounded-full hover:bg-gray-600 md:mt-0"
-        >
-          ↑
-        </a>
       </div>
     </footer>
   );
