@@ -72,7 +72,7 @@ export default function Location() {
         </div>
       </section>
 
-      <section className="text-center py-10 bg-sky-400 text-white">
+      <section className="text-center py-10 bg-sky-400 mb-4 text-white">
         <h2 className="text-2xl font-bold">Ready to Start Your Fitness Journey? 🚀</h2>
       </section>
     </>
