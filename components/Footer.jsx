@@ -38,18 +38,18 @@ export default function Footer() {
               </a>
             </li>
             <li>
-              <a href="#" className="hover:text-white">
-                Membership
+              <a href="/location" className="hover:text-white">
+                Location
               </a>
             </li>
             <li>
-              <a href="#" className="hover:text-white">
-                About
+              <a href="events" className="hover:text-white">
+                Events
               </a>
             </li>
             <li>
-              <a href="#" className="hover:text-white">
-                Blog
+              <a href="contact" className="hover:text-white">
+                Contact
               </a>
             </li>
           </ul>
@@ -60,22 +60,17 @@ export default function Footer() {
           <h3 className="text-lg font-semibold">Quick Links</h3>
           <ul className="mt-2 space-y-2 text-gray-400">
             <li>
-              <a href="#" className="hover:text-white">
-                Login
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-white">
+              <a href="/register" className="hover:text-white">
                 Register
               </a>
             </li>
             <li>
-              <a href="#" className="hover:text-white">
+              <a href="/contact" className="hover:text-white">
                 Contact Us
               </a>
             </li>
             <li>
-              <a href="#" className="hover:text-white">
+              <a href="/privacypolicy" className="hover:text-white">
                 Privacy Policy
               </a>
             </li>
@@ -84,14 +79,14 @@ export default function Footer() {
 
         {/* Operational Hours */}
         <div>
-          <h3 className="text-lg font-semibold">Operational</h3>
-          <p className="mt-2 text-gray-400">Every day: 9:00 – 22:00</p>
-          <p className="text-gray-400">Sat – Sun: 8:00 – 21:00</p>
+          <h3 className="text-lg font-semibold">Gym Timings</h3>
+          <p className="mt-2 text-gray-400">Every day: 9:00 AM – 9:00 PM</p>
+          <p className="text-gray-400">Sat – Sun: 8:00 AM – 12:00 PM</p>
           <h3 className="mt-4 text-lg font-semibold">New Schedule?</h3>
           <p className="font-semibold text-yellow-500">+91 99xxx-xxxxx</p>
         </div>
       </div>
-      <hr className="w-96 border-t border-gray-300 mb-4 mt-10 mx-auto" />
+      <hr className="md:w-96 w-48 border-t border-gray-300 mb-4 mt-10 mx-auto" />
       {/* Copyright & Back to Top */}
       <div className="flex flex-col items-center justify-center mt-1 text-sm text-gray-500 md:flex-row">
         <p>Copyright © ICON CROSSFIT. All Rights Reserved.</p>
