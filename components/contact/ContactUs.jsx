@@ -1,58 +1,75 @@
-import React from "react";
+'use client';
+
+import React, { useState } from "react";
+
+const branches = {
+  "Icon CrossFit Fitness Studio": {
+    address: "123 Fitness Street, City A",
+    phone: "+91 98765 43210",
+    email: "contact@iconcrossfit.com",
+  },
+  "Icon Women & Kids Fitness Studio": {
+    address: "456 Wellness Avenue, City B",
+    phone: "+91 87654 32109",
+    email: "support@iconwomenfit.com",
+  },
+  "Icon CrossFit Mappedu": {
+    address: "789 Strength Road, City C",
+    phone: "+91 76543 21098",
+    email: "info@iconcrossfitmappedu.com",
+  },
+};
 
 const ContactUs = () => {
+  const [selectedBranch, setSelectedBranch] = useState("");
+
   return (
-    <div className="max-w-screen-lg mt-32 mx-auto p-5">
+    <div className="max-w-screen-lg mt-32 mx-auto p-5 py-11">
       <div className="grid grid-cols-1 md:grid-cols-12 border">
         {/* Left Section */}
-        <div className="bg-gray-900 md:col-span-4 p-10 text-white">
+        <div className="dark:bg-gray-900 bg-gray-200 md:col-span-4 p-10  text-black dark:text-white">
           <p className="mt-4 text-sm leading-7 font-regular uppercase">Contact</p>
           <h3 className="text-3xl sm:text-4xl leading-normal font-extrabold tracking-tight">
-            Get In <span className="text-indigo-600">Touch</span>
+            Get In <span className="text-sky-400">Touch</span>
           </h3>
-          <p className="mt-4 leading-7 text-gray-200">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-            industry's standard dummy text ever since the 1500s.
+          <p className="mt-4 leading-7 dark:text-gray-200 text-black">
+            Reach out to us at our branches for inquiries or assistance!
           </p>
 
-          {/* Address */}
-          <div className="flex items-center mt-5">
-            <svg
-              className="h-6 mr-2 text-indigo-600"
-              fill="currentColor"
-              viewBox="0 0 489.536 489.536"
-              xmlns="http://www.w3.org/2000/svg"
+          {/* Branch Selection Dropdown */}
+          <div className="mt-5">
+            <label className="block text-sm font-medium dark:text-gray-300 text-gray-700 mb-1">
+              Select a Branch:
+            </label>
+            <select
+              className="block w-full p-2 border border-gray-300 rounded-md dark:text-gray-200 text-gray-900 "
+              onChange={(e) => setSelectedBranch(e.target.value)}
+              value={selectedBranch}
             >
-              <path d="M488.554 476l-99-280.2c-1-4.2-5.2-7.3-9.4-7.3h-45.6c12.9-31.1 19.6-54.9 19.6-70.8 0-64.6-50-117.7-112.5-117.7-61.5 0-112.5 52.1-112.5 117.7 0 17.6 8.2 43.1 19.9 70.8h-39.7c-4.2 0-8.3 3.1-9.4 7.3l-99 280.2c-3.2 10.3 6.3 13.5 9.4 13.5h468.8c4.2 0.5 12.5-4.2 9.4-13.5z" />
-            </svg>
-            <span className="text-sm">House #14, Street #12, Darulaman Road, Kabul, Afghanistan.</span>
+              <option value="">-- Choose a Branch --</option>
+              {Object.keys(branches).map((branch) => (
+                <option key={branch} value={branch}>
+                  {branch}
+                </option>
+              ))}
+            </select>
           </div>
 
-          {/* Phone */}
-          <div className="flex items-center mt-5">
-            <svg
-              className="h-6 mr-2 text-indigo-600"
-              fill="currentColor"
-              viewBox="0 0 60.002 60.002"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path d="M59.002 37.992c-3.69 0-6.693-3.003-6.693-6.693 0-0.553-0.447-1-1-1s-1 0.447-1 1c0 4.794 3.899 8.693 8.693 8.693 0.553 0 1-0.447 1-1s-0.447-1-1-1z" />
-            </svg>
-            <span className="text-sm">+93 749 99 65 50</span>
-          </div>
-
-          {/* Email */}
-          <div className="flex items-center mt-5">
-            <svg
-              className="h-6 mr-2 text-indigo-600"
-              fill="currentColor"
-              viewBox="0 0 60 60"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path d="M30 0C13.458 0 0 13.458 0 30s13.458 30 30 30 30-13.458 30-30S46.542 0 30 0zm13.295 20.523L30 29.061l-13.295-8.538a1 1 0 0 1 1.295-1.563L30 26.939l12-7.417a1 1 0 1 1 1.295 1.563z" />
-            </svg>
-            <span className="text-sm">contact@yourdomain.com</span>
-          </div>
+          {/* Display Selected Branch Details */}
+          {selectedBranch && (
+            <div className="mt-5">
+              <p className="text-lg font-semibold">{selectedBranch}</p>
+              <p className="mt-2 dark:text-gray-300 text-gray-700">
+                📍 Address: {branches[selectedBranch].address}
+              </p>
+              <p className="mt-2 dark:text-gray-300 text-gray-700">
+                📞 Phone: {branches[selectedBranch].phone}
+              </p>
+              <p className="mt-2 dark:text-gray-300 text-gray-700">
+                ✉ Email: {branches[selectedBranch].email}
+              </p>
+            </div>
+          )}
         </div>
 
         {/* Right Section - Contact Form */}
@@ -85,7 +102,7 @@ const ContactUs = () => {
             </div>
             <button
               type="submit"
-              className="w-full bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 transition duration-300"
+              className="w-full bg-sky-400 text-white py-2 px-4 rounded-md hover:bg-sky-800 transition duration-300"
             >
               Send Message
             </button>
