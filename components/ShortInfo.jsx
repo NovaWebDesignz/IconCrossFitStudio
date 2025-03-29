@@ -17,6 +17,9 @@ const ShortInfo = () => {
         className="absolute top-[-170px] sm:top-[-250px] left-1/2 transform -translate-x-1/2 w-[400px] h-[400px] sm:w-[500px] sm:h-[500px] drop-shadow-xl z-20" 
       />
 
+      {/* Glowing Blur Light Effect */}
+      <div className="absolute top-[1%] w-[260px] sm:w-[410px] md:w-[370px] lg:w-[430px] xl:w-[450px] h-[122px] bg-black opacity-30 blur-2xl z-[5]"></div>
+      
       {/* Heading */}
       <h2 className="mb-4 text-3xl -mt-64 font-extrabold text-black md:text-5xl z-10">
       FITNESS POWERED BY PEOPLE, <br />  NOT MACHINES.
