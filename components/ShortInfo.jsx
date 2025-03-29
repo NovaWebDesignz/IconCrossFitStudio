@@ -8,7 +8,7 @@ const ShortInfo = () => {
         src="/images/shortinfo_backpic.png" 
         alt="Background" 
         className=" w-96 h-80 mt-16 opacity-40" 
-      />
+      /> 
       
       {/* Logo Icon */}
       <img 
