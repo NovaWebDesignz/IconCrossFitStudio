@@ -17,7 +17,7 @@ export default function Header() {
   };
 
   return (
-    <header className="fixed -top-1 z-50 w-full bg-sky-300 shadow-lg transition-all duration-300">
+    <header className="fixed -top-1 z-50 w-full bg-sky-400 shadow-lg transition-all duration-300">
       <div className="flex items-center justify-between px-6 py-6 md:py-5 md:px-20">
         
         {/* Logo */}

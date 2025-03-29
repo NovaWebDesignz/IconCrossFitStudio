@@ -2,7 +2,7 @@ import React from "react";
 
 const ShortInfo = () => {
   return (
-    <div className="relative w-full max-w-[95%] md:max-w-[98%] h-auto md:h-auto  mt-[45px]  rounded-2xl overflow-visible mx-auto flex flex-col items-center px-6 py-28 md:py-24 text-center bg-gray-100">
+    <div className="relative w-full max-w-[95%] md:max-w-[98%] h-auto md:h-auto  mt-[45px]  rounded-2xl overflow-visible mx-auto flex flex-col items-center px-6 py-28 md:py-24 text-center bg-gray-200 dark:bg-black/50">
       {/* Background Image */}
       <img 
         src="/images/shortinfo_backpic.png" 
@@ -14,19 +14,19 @@ const ShortInfo = () => {
       <img 
         src="/images/Icon_logo.png" 
         alt="Logo" 
-        className="absolute top-[-170px] sm:top-[-250px] left-1/2 transform -translate-x-1/2 w-[400px] h-[400px] sm:w-[500px] sm:h-[500px] drop-shadow-xl z-20" 
+        className="absolute top-[-170px] sm:top-[-240px] left-1/2 transform -translate-x-1/2 w-[400px] h-[400px] sm:w-[500px] sm:h-[500px] drop-shadow-xl z-20" 
       />
 
       {/* Glowing Blur Light Effect */}
       <div className="absolute top-[1%] w-[260px] sm:w-[410px] md:w-[370px] lg:w-[430px] xl:w-[450px] h-[122px] bg-black opacity-30 blur-2xl z-[5]"></div>
       
       {/* Heading */}
-      <h2 className="mb-4 text-3xl -mt-64 font-extrabold text-black md:text-5xl z-10">
+      <h2 className="mb-4 text-3xl -mt-64 font-extrabold text-black dark:text-white md:text-5xl z-10">
       FITNESS POWERED BY PEOPLE, <br />  NOT MACHINES.
       </h2>
 
       {/* Description */}
-      <p className="max-w-2xl mb-6 text-base text-gray-700 md:text-lg z-10">
+      <p className="max-w-2xl mb-6 text-base text-gray-700 dark:text-gray-100 md:text-lg z-10">
         We believe in the strength of human potential. Our focus is on CrossFit training, emphasizing functional movements and dynamic workouts. 
         Whether you're new to fitness or an experienced athlete, our expert-led training sessions will help you push your limits—without relying on machines.
       </p>
