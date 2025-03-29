@@ -2,6 +2,7 @@
 
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { usePathname } from 'next/navigation';
+import { FaArrowTurnDown } from "react-icons/fa6";
 import Link from "next/link";
 import { FaBarsStaggered } from "react-icons/fa6";
 
@@ -55,6 +56,16 @@ const MobileNav = ({ isDarkMode }) => {
               </Link>
             ))}
           </nav>
+          {/* Register Button (Visible on lg and above) */}
+          <div className="mt-2 flex justify-center">
+            <Link
+              href="/register"
+              className="flex items-center gap-3 px-5 py-[9px] text-[15px] lg:text-[16px] transition rounded-2xl bg-gray-700 hover:bg-gray-300 text-white hover:text-black"
+            >
+              <FaArrowTurnDown className="text-xs lg:text-sm transform rotate-[-90deg]" aria-label="Open Register Page" />
+              Register
+            </Link>
+          </div>
         </SheetContent>
       </Sheet>
     );
